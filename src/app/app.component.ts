@@ -7,7 +7,7 @@ import {NgForm, AbstractControl, FormArray, FormBuilder, FormControl, FormGroup,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  types = ['music', 'pdf', 'movies', 'web'];
+  types = ['music', 'pdf', 'video', 'web'];
   master_bookmark = [];
   onSubmit(f: NgForm) {
     this.master_bookmark.push(f.value);

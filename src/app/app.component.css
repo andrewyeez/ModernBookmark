@@ -27,7 +27,7 @@ img.video {
 
 }
 
-img.webpage {
+img.web {
   content: url('http://aurawebsolutions.com/wp-content/uploads/2015/10/www-icon-600x600.png');
   background: #4568DC;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */

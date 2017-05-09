@@ -3,7 +3,6 @@
     <div class="col-xs-12 col-md-6 offset-md-3">
       <form #f="ngForm" (ngSubmit)="onSubmit(f)">
         <div class="form-group">
-          <label class="sr-only" for="url">Email address</label>
           <input ngModel type="text" class="form-control" name="url" placeholder="URL">
         </div>
         <div class="form-group">
@@ -28,50 +27,15 @@
       </form>
     </div>
   </div>
-  <p>
-    {{f.value | json}}
-  </p>
-  <ul>
-    <li *ngFor="let bookmark of master_bookmark">
-      {{bookmark | json}}
-    </li>
-  </ul>
   <div class="row top17 bottom17">
     <div class="col-xs-12 col-sm-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3">
       <div class="row">
 
-        <div class="col-xs-3 col-md-3">
+        <div *ngFor="let bookmark of master_bookmark" class="col-xs-3 col-md-3">
           <div class="card">
-            <img class="card-img-top music" alt="Music Bookmark">
+            <img class="card-img-top {{bookmark.type}}" alt="Bookmark">
             <div class="card-block">
-              <p class="card-text center">Music</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-3 col-md-3">
-          <div class="card">
-            <img class="card-img-top pdf" alt="Music Bookmark">
-            <div class="card-block">
-              <p class="card-text center">Document</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-3 col-md-3">
-          <div class="card">
-            <img class="card-img-top webpage" alt="Music Bookmark">
-            <div class="card-block">
-              <p class="card-text center">Web</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-3 col-md-3">
-          <div class="card">
-            <img class="card-img-top video" alt="Music Bookmark">
-            <div class="card-block">
-              <p class="card-text center">Video</p>
+              <p class="card-text center">{{bookmark.type}}</p>
             </div>
           </div>
         </div>
