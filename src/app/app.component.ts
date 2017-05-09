@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {NgForm, AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  types = ['music', 'pdf', 'movies', 'web'];
+  master_bookmark = [];
+  onSubmit(f: NgForm) {
+    this.master_bookmark.push(f.value);
+    console.log(this.master_bookmark);
+  };
 }
