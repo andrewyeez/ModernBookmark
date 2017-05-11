@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { IndexDB } from '../assets/javascript/indexdb'
 import {NgForm, AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
